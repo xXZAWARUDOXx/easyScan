@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         Bitmap photo = (Bitmap) data.getExtras().get("data");
-
         Bitmap newBM = Bitmap.createBitmap(photo, 0, 0, photo.getWidth(), photo.getWidth());
     }
 }
