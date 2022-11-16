@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(changeIntent, 123);
     }
 
+    public void onclickHistory(View view) {
+        Intent changeIntent = new Intent(this, HistoryActivity.class);
+        startActivity(changeIntent);
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
