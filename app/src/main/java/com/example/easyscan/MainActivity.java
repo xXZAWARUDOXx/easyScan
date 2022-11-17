@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(changeIntent);
     }
 
+    public void mailActivity(View view) {
+        Intent changeIntent = new Intent(this, MailActivity.class);
+        startActivity(changeIntent);
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
