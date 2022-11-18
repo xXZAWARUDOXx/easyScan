@@ -79,7 +79,6 @@
         android:layout_height="43dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="14dp"
-        android:onClick="onCreate"
         android:text="X"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

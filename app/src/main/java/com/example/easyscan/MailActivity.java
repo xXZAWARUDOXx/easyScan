@@ -24,18 +24,8 @@ public class MailActivity extends AppCompatActivity {
         toMail = findViewById(R.id.toField);
         subject = findViewById(R.id.subjectField);
         body = findViewById(R.id.bodyField);
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                open(view);
-            }
-        });
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MailActivity.this, MainActivity.class));
-            }
-        });
+        sendButton.setOnClickListener(this::open);
+        cancelButton.setOnClickListener(view -> startActivity(new Intent(MailActivity.this, MainActivity.class)));
     }
 
     public void open(View view) {
