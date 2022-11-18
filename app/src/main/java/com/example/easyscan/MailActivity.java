@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 public class MailActivity extends AppCompatActivity {
     private Button sendButton;
+    private Button cancelButton;
     private EditText toMail;
     private EditText subject;
     private EditText body;
@@ -19,6 +20,7 @@ public class MailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail);
         sendButton = findViewById(R.id.sendButton);
+        cancelButton = findViewById(R.id.cancelButton);
         toMail = findViewById(R.id.toField);
         subject = findViewById(R.id.subjectField);
         body = findViewById(R.id.bodyField);
@@ -26,6 +28,12 @@ public class MailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 open(view);
+            }
+        });
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MailActivity.this, MainActivity.class));
             }
         });
     }
