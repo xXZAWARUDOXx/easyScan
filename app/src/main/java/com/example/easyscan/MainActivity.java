@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, MailActivity.class);
         //intent.putExtra("attachment", baos);
-
         startActivity(intent);
     }
 }
